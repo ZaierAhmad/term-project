@@ -1,0 +1,33 @@
+name: Production CI/CD
+
+on:
+  push:
+    branches:
+      - main # Or 'production', if that's your final branch name
+
+jobs:
+  build_and_deploy_production:
+    runs-on: ubuntu-latest
+    environment: Production
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build with Parcel for Production
+      run: npm run build:prod # Use specific build script for production
+
+    - name: Deploy to GitHub Pages (Production)
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        publish_branch: gh-pages # Assuming gh-pages is your production deployment branch
