@@ -1,4 +1,132 @@
-body {
-  font-family: Georgia, serif;
-  background-color: #fff;
+/* About Us Page Specific Styles */
+
+#company-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#company-mission h2 {
+    font-size: 2.5em;
+    color: #343a40;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between image and text */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+}
+
+.mission-image {
+    max-width: 45%; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-content div { /* Text content container */
+    max-width: 50%;
+    flex: 1; /* Allow text to grow */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.mission-content p {
+    font-size: 1.1em;
+    color: #495057;
+}
+
+.mission-content .cta-button {
+    margin-top: 25px;
+}
+
+/* Our Team Section */
+#our-team h2 {
+    font-size: 2.5em;
+    color: #343a40;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    text-align: center;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #e8491d; /* Accent border */
+}
+
+.team-member h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    color: #343a40; /* Dark text for name */
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #6c757d; /* Muted text for role */
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    font-size: 1.5em;
+    margin: 0 8px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Example: Blue for LinkedIn */
+}
+
+.team-member.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecef;
+    border: 2px dashed #ced4da;
+    color: #6c757d;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for About Us Page */
+@media (max-width: 768px) {
+    .mission-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mission-image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .mission-content div {
+        max-width: 100%;
+    }
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack team members */
+    }
 }
