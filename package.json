@@ -2,7 +2,15 @@
   "name": "term-project-f24",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scripts": {
+    "lint:html": "htmlhint src/",
+    "lint:css": "stylelint styles/**/*.css",
+    "build": "parcel build src/*.html --dist-dir build",
+    "build:dev": "parcel build src/*.html --dist-dir build --public-url /",
+    "build:staging": "parcel build src/*.html --dist-dir build --public-url /staging/",
+    "build:prod": "parcel build src/*.html --dist-dir build --public-url /"
+}
   },
   "repository": {
     "type": "git",
@@ -15,5 +23,13 @@
     "url": "https://github.com/imranucp/term-project-f24/issues"
   },
   "homepage": "https://github.com/imranucp/term-project-f24#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "htmlhint": "^1.6.3",
+    "htmlhint-cli": "^1.0.7",
+    "parcel": "^2.15.4",
+    "stylelint": "^16.21.0",
+    "stylelint-config-standard": "^38.0.0"
+  }
 }
