@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imranucp/term-project-f24.git"
+    "url": "git+https://github.com/ZaierAhmad/term-project-f24.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/imranucp/term-project-f24/issues"
+    "url": "https://github.com/ZaierAhmad/term-project-f24/issues"
   },
-  "homepage": "https://github.com/imranucp/term-project-f24#readme",
+  "homepage": "https://github.com/ZaierAhmad/term-project-f24#readme",
   "description": "",
   "devDependencies": {
     "gh-pages": "^6.3.0",
