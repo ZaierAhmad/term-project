@@ -1,16 +1,16 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "color-hex-case": "lower",
-    "color-hex-length": "long",
-    "declaration-block-trailing-semicolon": "always",
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "declaration-no-important": true,
     "max-nesting-depth": 3,
     "no-duplicate-selectors": true,
+    "property-no-unknown": true,
     "selector-class-pattern": "^[a-z][a-zA-Z0-9-]+$",
     "selector-id-pattern": "^[a-z][a-zA-Z0-9-]+$",
-    "property-no-unknown": true,
     "value-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "single",
-    "indentation": "tab"
+    "font-family-name-quotes": "always-where-required"
   }
 }
