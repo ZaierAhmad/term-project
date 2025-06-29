@@ -1,13 +1,6 @@
 /* Contact Us Page Specific Styles */
 
 /* GENERAL SECTION HEADING FOR CONTACT PAGE */
-#contact-info h2 {
-    font-size: 2.5em;
-    color: #343a40;
-    text-align: left; /* Overriding the global h2 center align */
-    margin-bottom: 20px; /* Adjusting margin */
-}
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr; /* Details on left, form on right */
@@ -19,12 +12,13 @@
     background: #f8f9fa; /* Light background for details */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
 }
 
 /* This h2 is redundant because #contact-info h2 already targets it.
    Stylelint preferred #contact-info h2 to come before .contact-details h2.
    We make #contact-info h2 the primary selector for the page's main heading. */
+
 /* .contact-details h2 { } */
 
 .contact-details p {
@@ -72,10 +66,10 @@
 
 /* Contact Form */
 .contact-form-container {
-    background: #ffffff;
+    background: #fff;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
 }
 
 .contact-form-container h2 { /* Specific heading within form container */
@@ -96,6 +90,10 @@
 }
 
 /* FORM SELECTOR ORDERING */
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea { /* General input/textarea styles */
@@ -112,12 +110,8 @@
 .form-group input[type="email"]:focus,
 .form-group textarea:focus { /* More specific focus styles */
     border-color: #e8491d; /* Accent color on focus */
-    box-shadow: 0 0 0 0.2rem rgba(232, 73, 29, 0.25);
+    box-shadow: 0 0 0 0.2rem rgb(232 73 29 / 25%);
     outline: none; /* Remove default outline */
-}
-
-.form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
 }
 
 .cta-button { /* Ensure CTA button style is consistent */
@@ -145,27 +139,38 @@
     overflow: hidden; /* Ensure rounded corners apply to the image */
 }
 
+#contact-info h2 {
+    font-size: 2.5em;
+    color: #343a40;
+    text-align: left; /* Overriding the global h2 center align */
+    margin-bottom: 20px; /* Adjusting margin */
+}
+
 /* Responsive adjustments for Contact Page */
-@media (max-width: 992px) {
+@media (width <= 992px) {
     .contact-grid {
         grid-template-columns: 1fr; /* Stack details and form */
         gap: 30px;
     }
+
     .contact-details, .contact-form-container {
         width: 100%; /* Ensure they take full width */
     }
+
     .contact-details {
         margin-bottom: 30px; /* Space between stacked sections */
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     header h1 {
         font-size: 2em;
     }
+
     .contact-details ul li {
         font-size: 1em;
     }
+
     .social-media-contact a {
         font-size: 1.5em;
     }

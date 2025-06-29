@@ -13,10 +13,10 @@
 }
 
 .blog-post {
-    background: #ffffff;
+    background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column; /* Stack image and content */
@@ -24,7 +24,7 @@
 
 .blog-post:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 10%);
 }
 
 .post-image {
@@ -85,7 +85,7 @@
     margin: 0 5px;
     border: 1px solid #dee2e6;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #343a40;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -99,15 +99,16 @@
 .pagination a.active,
 .pagination a:focus {
     background-color: #e8491d;
-    color: #ffffff;
+    color: #fff;
     border-color: #e8491d;
 }
 
 /* Responsive adjustments for Blog Page */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .blog-grid {
         grid-template-columns: 1fr; /* Stack posts */
     }
+
     .pagination a {
         padding: 8px 12px;
         margin: 0 3px;
