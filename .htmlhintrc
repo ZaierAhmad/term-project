@@ -1,22 +1,12 @@
 {
-  "tags": {
-    "new-line-between-tags": true,
-    "empty-tag": true,
-    "space-between-end-tag": true
-  },
-  "attrs": {
-    "empty-attrs": true,
-    "attr-no-duplication": true,
-    "attr-lowercase": true,
-    "attr-value-double-quotes": true
-  },
-  "indent": {
-    "level": 2
-  },
+  "tagname-lowercase": true,
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "doctype-first": true,
+  "tag-pair": true,
   "spec-char-escape": true,
-  "id-pattern": "^[a-zA-Z]+[a-zA-Z0-9_-]*$",
-  "class-pattern": "^[a-zA-Z]+[a-zA-Z0-9_-]*$",
+  "id-unique": true,
+  "src-not-empty": true,
   "alt-require": true,
-  "space-tab-switch": "space",
-  "text-ignore-regex": "[<>]"
+  "title-require": true
 }
