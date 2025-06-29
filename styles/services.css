@@ -1,56 +1,98 @@
-/* Import base styles if you have a main.css that defines body, header, footer etc. */
+/* Services Page Specific Styles */
 
+/* Ensure consistency with main.css by inheriting or importing */
 /* @import url('main.css'); */
 
-/* If not importing, add basic resets/styles here */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Inherit from main.css */
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4; /* Light background */
+    background-color: #f8f9fa; /* Inherit from main.css */
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #343a40; /* Inherit from main.css */
+    color: #ffffff;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header nav a {
-    color: #fff;
+    color: #ffffff; /* Inherit from main.css */
     text-decoration: none;
     margin: 0 15px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.05em;
 }
 
-header nav a:hover {
-    color: #e8491d; /* Orange accent */
-}
-
-h1, h2, h3 {
-    color: #333; /* Darker headings */
+header nav a:hover, header nav a.active {
+    color: #e9ecef;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.8em; /* Inherit from main.css */
     margin-top: 20px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+h2 {
+    text-align: center; /* Inherit from main.css */
+    font-size: 2.2em; /* Inherit from main.css */
+    color: #343a40;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after { /* Underline for section titles */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e8491d; /* Accent orange */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.6em; /* Inherit from main.css */
+    color: #e8491d; /* Orange for service titles */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.05em; /* Inherit from main.css */
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #e8491d; /* Inherit from main.css */
+}
+
+a:hover {
+    color: #d34217; /* Inherit from main.css */
+}
+
 
 .services-section {
     max-width: 1100px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff; /* White background for content */
-    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-    border-radius: 8px;
+    margin: 40px auto; /* Inherit main margin */
+    padding: 30px; /* Inherit section padding */
+    background-color: #ffffff; /* Inherit section background */
+    border-radius: 8px; /* Inherit section radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Inherit section shadow */
 }
 
 .services-section h2 {
-    text-align: center;
+    font-size: 2.2em; /* Re-emphasize */
+    color: #343a40;
     margin-bottom: 30px;
-    font-size: 2em;
 }
 
 .service-grid {
@@ -61,16 +103,16 @@ h1 {
 }
 
 .service-item {
-    background: #f9f9f9;
+    background: #f9f9f9; /* Slightly different background for feature boxes */
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Consistent shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced hover shadow */
 }
 
 .service-item img {
@@ -79,7 +121,7 @@ h1 {
     margin-bottom: 20px;
     border-radius: 50%; /* Make icons circular */
     object-fit: cover; /* Ensure image covers the area */
-    border: 3px solid #e8491d; /* Accent border */
+    border: 4px solid #e8491d; /* Accent border */
 }
 
 .service-item h3 {
@@ -94,9 +136,18 @@ h1 {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #343a40; /* Inherit from main.css */
+    color: #adb5bd;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px; /* Space above footer */
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* Responsive adjustments for Services Page */
+@media (max-width: 768px) {
+    /* Inherit responsive adjustments from main.css */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.4em; }
+    .services-section { padding: 20px; }
 }

@@ -1,8 +1,11 @@
 /* Contact Us Page Specific Styles */
 
+/* GENERAL SECTION HEADING FOR CONTACT PAGE */
 #contact-info h2 {
     font-size: 2.5em;
     color: #343a40;
+    text-align: left; /* Overriding the global h2 center align */
+    margin-bottom: 20px; /* Adjusting margin */
 }
 
 .contact-grid {
@@ -19,10 +22,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.contact-details h2 {
-    text-align: left;
-    margin-bottom: 20px;
-}
+/* This h2 is redundant because #contact-info h2 already targets it.
+   Stylelint preferred #contact-info h2 to come before .contact-details h2.
+   We make #contact-info h2 the primary selector for the page's main heading. */
+/* .contact-details h2 { } */
 
 .contact-details p {
     font-size: 1.1em;
@@ -75,9 +78,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.contact-form-container h2 {
+.contact-form-container h2 { /* Specific heading within form container */
     text-align: left;
     margin-bottom: 30px;
+    font-size: 2.2em; /* Ensure it matches global h2 size */
 }
 
 .form-group {
@@ -91,9 +95,10 @@
     color: #495057;
 }
 
+/* FORM SELECTOR ORDERING */
 .form-group input[type="text"],
 .form-group input[type="email"],
-.form-group textarea {
+.form-group textarea { /* General input/textarea styles */
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ced4da;
@@ -105,7 +110,7 @@
 
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
-.form-group textarea:focus {
+.form-group textarea:focus { /* More specific focus styles */
     border-color: #e8491d; /* Accent color on focus */
     box-shadow: 0 0 0 0.2rem rgba(232, 73, 29, 0.25);
     outline: none; /* Remove default outline */
@@ -113,6 +118,24 @@
 
 .form-group textarea {
     resize: vertical; /* Allow vertical resizing */
+}
+
+.cta-button { /* Ensure CTA button style is consistent */
+    display: inline-block;
+    background: #e8491d;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background: #343a40;
+    transform: translateY(-2px);
+    color: #fff;
 }
 
 /* Map Placeholder */
