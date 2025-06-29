@@ -1,36 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs</title>
-  <link rel="stylesheet" href="../styles/blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Startup Innovations</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/blog.css">
 </head>
 <body>
-  <header>
-    <h1>Our Blogs</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <article>
-        <h2>Blog Post 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
-      </article>
-      <article>
-        <h2>Blog Post 2</h2>
-        <p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a.</p>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 My Website. All Rights Reserved.</p>
-  </footer>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <h1>Latest Insights & News</h1>
+    </header>
+
+    <main>
+        <section id="blog-posts">
+            <h2>Our Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <img src="https://via.placeholder.com/400x250/adb5bd/ffffff?text=Article+1" alt="Article 1 Preview" class="post-image">
+                    <div class="post-content">
+                        <h3>The Future of AI in Business</h3>
+                        <p class="post-meta">By Admin | May 15, 2023</p>
+                        <p>An in-depth look at how Artificial Intelligence is transforming industries and creating new opportunities...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="https://via.placeholder.com/400x250/6c757d/ffffff?text=Article+2" alt="Article 2 Preview" class="post-image">
+                    <div class="post-content">
+                        <h3>Scaling Your Startup</h3>
+                        <p class="post-meta">By CEO | April 28, 2023</p>
+                        <p>Practical advice and strategies for startups looking to scale their operations effectively and sustainably...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="https://via.placeholder.com/400x250/343a40/ffffff?text=Article+3" alt="Article 3 Preview" class="post-image">
+                    <div class="post-content">
+                        <h3>Cloud Computing Trends 2023</h3>
+                        <p class="post-meta">By Tech Lead | April 10, 2023</p>
+                        <p>Stay ahead of the curve with the latest advancements and trends in cloud computing...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="https://via.placeholder.com/400x250/e9ecef/343a40?text=Article+4" alt="Article 4 Preview" class="post-image">
+                    <div class="post-content">
+                        <h3>Cybersecurity Essentials for SMEs</h3>
+                        <p class="post-meta">By Security Expert | March 20, 2023</p>
+                        <p>Protect your business from cyber threats with essential cybersecurity practices and tips...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <!-- Add more blog posts as needed -->
+            </div>
+             <div class="pagination">
+                <a href="#" class="prev">« Previous</a>
+                <a href="#" class="page-num active">1</a>
+                <a href="#" class="page-num">2</a>
+                <a href="#" class="page-num">3</a>
+                <a href="#" class="next">Next »</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Startup Innovations. All rights reserved.</p>
+    </footer>
 </body>
 </html>
