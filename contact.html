@@ -1,30 +1,67 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Contact Us</title><link rel=stylesheet href=/staging/contact.9e7cfaa4.css><body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <ul>
-        <li><a href=/staging/index.html>Home</a></li>
-        <li><a href=/staging/contact.html>Contact</a></li>
-        <li><a href=/staging/blog.html>Blogs</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <form>
-      <label for=name>Name:</label>
-      <input id=name name=name required>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Contact Us - Startup Innovations</title><link rel=stylesheet href=/about.4b33dcc0.css><link rel=stylesheet href=/contact.2f883ddd.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css><body>
+    <header>
+        <nav>
+            <a href=/index.html>Home</a>
+            <a href=/about.html>About Us</a>
+            <a href=/services.html>Services</a>
+            <a href=/portfolio.html>Portfolio</a>
+            <a href=/blog.html>Blog</a>
+            <a href=/contact.html class=active>Contact Us</a>
+        </nav>
+        <h1>Get In Touch With Us</h1>
+    </header>
 
-      <label for=email>Email:</label>
-      <input type=email id=email name=email required>
+    <main>
+        <section id=contact-info>
+            <div class=contact-grid>
+                <div class=contact-details>
+                    <h2>Reach Out</h2>
+                    <p>We'd love to hear from you! Fill out the form below or use our contact details.</p>
+                    <ul>
+                        <li><i class="fa-map-marker-alt fas"></i> 123 Innovation Drive, Tech City, TC 54321</li>
+                        <li><i class="fa-phone fas"></i> +1 (123) 456-7890</li>
+                        <li><i class="fa-envelope fas"></i> info@startupinnovations.com</li>
+                    </ul>
+                    <div class=social-media-contact>
+                        <h3>Follow Us</h3>
+                        <a href=#><i class="fa-facebook-f fab"></i></a>
+                        <a href=#><i class="fa-twitter fab"></i></a>
+                        <a href=#><i class="fa-linkedin-in fab"></i></a>
+                        <a href=#><i class="fa-instagram fab"></i></a>
+                    </div>
+                </div>
+                <div class=contact-form-container>
+                    <h2>Send Us a Message</h2>
+                    <form action=# method=post>
+                        <div class=form-group>
+                            <label for=name>Name</label>
+                            <input id=name name=name required placeholder="Your Name">
+                        </div>
+                        <div class=form-group>
+                            <label for=email>Email</label>
+                            <input type=email id=email name=email required placeholder="Your Email">
+                        </div>
+                        <div class=form-group>
+                            <label for=subject>Subject</label>
+                            <input id=subject name=subject placeholder=Subject>
+                        </div>
+                        <div class=form-group>
+                            <label for=message>Message</label>
+                            <textarea id=message name=message rows=6 required placeholder="Your Message"></textarea>
+                        </div>
+                        <button class=cta-button>Send Message</button>
+                    </form>
+                </div>
+            </div>
+             <div class=map-placeholder>
+                 
+                <img src="https://via.placeholder.com/1000x400/cccccc/333333?text=Interactive+Map+Placeholder" alt="Map Placeholder" style=border-radius:8px;width:100%>
+            </div>
+        </section>
+    </main>
 
-      <label for=message>Message:</label>
-      <textarea id=message name=message rows=4 required></textarea>
-
-      <button>Send</button>
-    </form>
-  </main>
-  <footer>
-    <p>© 2025 My Website. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <p>© 2023 Startup Innovations. All rights reserved.</p>
+    </footer>
 
 
