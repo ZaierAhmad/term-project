@@ -6,7 +6,7 @@
   "lint:css": "stylelint styles/**/*.css",
   "build": "parcel build src/*.html --dist-dir build",
   "build:dev": "parcel build src/*.html --dist-dir build --public-url /term-project/",
-    "build:staging": "parcel build src/*.html --dist-dir build --public-url /staging/",
+    "build:staging": "parcel build src/*.html --dist-dir build --public-url /term-project/",
     "build:prod": "parcel build src/*.html --dist-dir build --public-url /term-project/"
   },
   "repository": {
